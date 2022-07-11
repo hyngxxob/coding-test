@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 class ct_practice2 {
     HashSet<Integer> numbersSet = new HashSet<>();
-
+    int test = 0;
     public boolean isPrime(int num) {
         // 1. 0과 1은 소수가 아니다
         if (num == 0 || num == 1)
