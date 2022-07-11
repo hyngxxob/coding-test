@@ -1,7 +1,17 @@
+package exercise;
+import java.util.Arrays;
 import java.util.*;
 
-class Solution {
-    public static int[] solution(int[] answers) {
+public class ct_practice1 {
+	public static void main(String[] args) {
+		int[] example = {1,2,1,2,2};
+		
+		int[] answer = solution(example);
+		
+		System.out.println(Arrays.toString(answer));
+	}
+	
+	private static int[] solution(int[] example) {
         int[][] patterns = {
                 {1, 2, 3, 4, 5},
                 {2, 1, 2, 3, 2, 4, 2, 5},
@@ -10,8 +20,8 @@ class Solution {
 
         int[] hit = new int[3];
         for(int i = 0; i < hit.length; i++) {
-            for(int j = 0; j < answers.length; j++) {
-                if(patterns[i][j % patterns[i].length] == answers[j]) hit[i]++;
+            for(int j = 0; j < example.length; j++) {
+                if(patterns[i][j % patterns[i].length] == example[j]) hit[i]++;
             }
         }
 
@@ -24,6 +34,7 @@ class Solution {
         int cnt = 0;
         for(int num : list)
             answer[cnt++] = num;
+        
         return answer;
-    }
+	}
 }
